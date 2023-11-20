@@ -1,24 +1,21 @@
-
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./components/Login/Login";
 import "./App.css";
-// Corrected import statement for API services
+
+//  import API services
 import { adminLogin, getAdminDetails, updatePrice } from "./Services/api";
 import AdminDashboard from "./components/AdminDashboard/AdminDashboard";
-
-
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false);
   const [adminData, setAdminData] = useState(null);
 
   useEffect(() => {
-    // Simulate checking if the user is already logged in
+    // check if the user is already logged in
     const checkLoggedInStatus = async () => {
       try {
-        // Assuming you have some logic to check if the user is already logged in
-        // For now, let's just assume the user is not logged in
+        // user is not logged in
         setLoggedIn(false);
       } catch (error) {
         console.error("Error checking login status:", error);
@@ -27,7 +24,7 @@ function App() {
 
     checkLoggedInStatus();
   }, []);
-  
+
   const handleLogin = async (username, password) => {
     try {
       const loginResponse = await adminLogin(username, password);
@@ -35,7 +32,7 @@ function App() {
 
       setLoggedIn(true);
 
-      // Get admin details after successful login
+      // admin details after login
       const adminDetailsResponse = await getAdminDetails(loginResponse.data.id);
       setAdminData(adminDetailsResponse.data);
     } catch (error) {
@@ -53,7 +50,6 @@ function App() {
     }
   };
 
-  
   return (
     <Router>
       <Routes>
@@ -75,7 +71,5 @@ function App() {
     </Router>
   );
 }
-
-
 
 export default App;

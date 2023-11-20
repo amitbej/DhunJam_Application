@@ -1,13 +1,8 @@
-// src/components/Graph/Graph.js
-import React from 'react';
+import React from "react";
 
 const Graph = ({ customAmount, regularAmounts }) => {
-  // Implement graph rendering based on customAmount and regularAmounts
-  return (
-    <div>
-      {/* Render your graph here */}
-    </div>
-  );
+  // Graph Render
+  return <div>{/* graph */}</div>;
 };
 
 export default Graph;

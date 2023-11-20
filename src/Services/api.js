@@ -1,9 +1,8 @@
-// src/services/api.js
 import axios from "axios";
 
 const BASE_URL = "https://stg.dhunjam.in/account/admin";
 
-// Function to perform admin login
+// Admin login
 export const adminLogin = async () => {
   const url = `${BASE_URL}/login`;
   const credentials = {
@@ -20,7 +19,7 @@ export const adminLogin = async () => {
   }
 };
 
-// Function to get admin details
+// get admin details
 export const getAdminDetails = async (adminId) => {
   const url = `${BASE_URL}/${adminId}`;
   console.log("Get Admin Details URL:", url); // check krne ke liye
@@ -35,7 +34,7 @@ export const getAdminDetails = async (adminId) => {
   }
 };
 
-// Function to update the price
+// update price
 export const updatePrice = async (adminId, updatedAmount) => {
   const url = `${BASE_URL}/${adminId}`;
 

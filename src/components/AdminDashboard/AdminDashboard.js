@@ -1,6 +1,4 @@
 /*
-
-// src/components/AdminDashboard/AdminDashboard.js
 import React from 'react';
 import './AdminDashboard.css';
 
@@ -17,14 +15,11 @@ const AdminDashboard = ({ data, onUpdatePrice }) => {
     </div>
   );
 };
-
 export default AdminDashboard;
-
 */
 
-// src/components/AdminDashboard/AdminDashboard.js
-import React, { useState } from 'react';
-import './AdminDashboard.css';
+import React, { useState } from "react";
+import "./AdminDashboard.css";
 
 const AdminDashboard = ({ data, onUpdatePrice }) => {
   const { name, location, chargeCustomers, amount } = data;
@@ -48,7 +43,7 @@ const AdminDashboard = ({ data, onUpdatePrice }) => {
   };
 
   const handleUpdate = () => {
-    // Assuming onUpdatePrice is a function that takes an object with updated amounts
+    // onUpdatePrice
     onUpdatePrice({
       category_6: customAmount,
       category_7: regularAmounts.category_7,
@@ -62,8 +57,8 @@ const AdminDashboard = ({ data, onUpdatePrice }) => {
     <div className="dashboard-container">
       <h1>{name}</h1>
       <p>Location: {location}</p>
-      <p>Charge Customers: {chargeCustomers ? 'Yes' : 'No'}</p>
-      
+      <p>Charge Customers: {chargeCustomers ? "Yes" : "No"}</p>
+
       {/* Custom Song Request Amount */}
       {chargeCustomers && (
         <div>
@@ -86,9 +81,9 @@ const AdminDashboard = ({ data, onUpdatePrice }) => {
             type="number"
             id="category_7"
             value={regularAmounts.category_7}
-            onChange={(e) => handleRegularAmountChange('category_7', e)}
+            onChange={(e) => handleRegularAmountChange("category_7", e)}
           />
-          {/* Repeat similar blocks for category_8, category_9, and category_10 */}
+          {/* similar blocks for category_8, category_9, and category_10 */}
         </div>
       )}
 

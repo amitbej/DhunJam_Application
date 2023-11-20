@@ -1,35 +1,33 @@
-/* src/components/Login/Login.css */
 .login-container {
-    text-align: center;
-    width: 600px;
-    margin: auto;
-  }
-  
-  .login-container h1 {
-    font-size: 32px;
-  }
-  
-  .login-container input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ffffff;
-    background-color: transparent;
-    color: #ffffff;
-    font-size: 16px;
-  }
-  
-  .login-container button {
-    padding: 10px;
-    background-color: #6741d9;
-    color: #ffffff;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-  }
-  
-  .login-container button:hover,
-  .login-container button:active {
-    border: 1px solid #f0c3f1;
-  }
-  
+  text-align: center;
+  width: 600px;
+  margin: auto;
+}
+
+.login-container h1 {
+  font-size: 32px;
+}
+
+.login-container input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.login-container button {
+  padding: 10px;
+  background-color: #6741d9;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.login-container button:hover,
+.login-container button:active {
+  border: 1px solid #f0c3f1;
+}
